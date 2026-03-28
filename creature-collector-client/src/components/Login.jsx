@@ -10,7 +10,7 @@ function Login({ onLogin }) {
       body: JSON.stringify({ username, password }),
     });
     if (result.message === "Login successful") {
-      onLogin(); // notify parent to show dashboard
+      onLogin();
     } else {
       alert(result.error);
     }

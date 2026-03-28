@@ -6,4 +6,4 @@ router.get('/', creatureCtrl.getCreatures);
 router.post('/', creatureCtrl.addCreature);
 router.delete('/:id', creatureCtrl.deleteCreature);
 
-module.exports = router; // Now at the bottom
+module.exports = router; 

@@ -3,6 +3,6 @@ const router = express.Router();
 const authCtrl = require('../controllers/authController');
 
 router.post('/register', authCtrl.register);
-router.post('/login', authCtrl.login); // Moved up
+router.post('/login', authCtrl.login); 
 
-module.exports = router; // Now at the bottom
+module.exports = router; 

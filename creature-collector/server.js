@@ -1,5 +1,4 @@
-// server.js
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -26,11 +25,9 @@ app.use(session({
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/creatureDB')
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
-// Basic route to check server
 app.get('/', (req, res) => {
 res.send('Hello from Creature Collector API');
 });
-// TODO: Add API routes (see Phase 4)
 const authRoutes = require('./routes/auth');
 const creatureRoutes = require('./routes/creatures');
 app.use('/auth', authRoutes);
